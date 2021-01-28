@@ -21,3 +21,6 @@ Optimized Script | Easy Setup | Shop. Armory. Employment center
   - Config.Weapon | Allows you to choose weapons in shops
   - Config.Job | Allows you to choose trades in the employment center
  
+# Showcase
+
+[preview] : https://streamable.com/qo09t9
