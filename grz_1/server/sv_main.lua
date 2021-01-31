@@ -46,6 +46,21 @@ AddEventHandler('grz_1:Shop', function(id, label, item, price)
     end
 end)
 
+RegisterServerEvent('grz_1:ShopSell')
+AddEventHandler('grz_1:ShopSell', function(id, label, item, price)
+    local xPlayer = ESX.GetPlayerFromId(source)
+    local sourceItem = xPlayer.getInventoryItem(item).count
+    if sourceItem >= 1 then
+        if id == 1 then
+                    xPlayer.removeInventoryItem(item, 1)
+                    xPlayer.addMoney(price)
+                    TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'Vous venez de faire ' .. price .. '$ avec 1 ' .. label .. ' !'})
+        end
+    else
+        TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'Vous n\'avez pas de ' .. label .. ''})
+    end
+end)
+
 
 MySQL.ready(function()
 	MySQL.Async.fetchAll('SELECT name, label FROM jobs WHERE whitelisted = @whitelisted', {
