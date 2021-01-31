@@ -1,6 +1,6 @@
 # GRZ SHOP
 
-Optimized Script | Easy Setup | Shop. Armory. Employment center
+Optimized Script | Easy Setup | Shop. Armory. Employment center. Sell item
 
 # Important
 
@@ -20,6 +20,7 @@ Optimized Script | Easy Setup | Shop. Armory. Employment center
   - Config.Food | Allows you to choose items in shops
   - Config.Weapon | Allows you to choose weapons in shops
   - Config.Job | Allows you to choose trades in the employment center
+  - Config.Sell | Allow player to resell to ped
  
 # Showcase
 
