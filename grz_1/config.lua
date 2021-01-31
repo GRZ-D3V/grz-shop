@@ -93,8 +93,8 @@ Config.IllegalPharmacyShop = {
 }
 
 Config.JumpAir = {
-	-- {Label, Name, Price}
-	{'Parachute', 'gadget_parachute', 20},
+	-- {Label, Name, Price, License}
+	{'Parachute', 'gadget_parachute', 20, 0},
 }
 
 Config.YouToolShop = {
@@ -102,10 +102,17 @@ Config.YouToolShop = {
 	{'Perceseuse', 'drill', 20},
 }
 
+-- YouTool Back shop
 Config.YouToolBackShop = {
 	-- {Label, Name, Price}
 	{'Boite à transport', 'transportbox', 10},
 }
+
+Config.YouToolBackShopSell = {
+	-- {Label, Name, Price}
+	{'Perceseuse', 'drill', 8},
+}
+--------------------
 
 Config.Weapon = {
 	-- {Label, Name, Price, License}
