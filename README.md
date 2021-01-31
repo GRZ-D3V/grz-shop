@@ -25,3 +25,7 @@ Optimized Script | Easy Setup | Shop. Armory. Employment center. Sell item
 # Showcase
 
 [preview] : https://streamable.com/qo09t9
+
+
+# Wiki
+I have a set a Wiki that will help you understand and use my script :)
