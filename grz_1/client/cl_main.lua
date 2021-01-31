@@ -13,20 +13,20 @@ function OpenShopMenu()
 	local elements = {}
 	for _,v in pairs(Config.Food) do table.insert(elements, {label = v[1]..' | <span style="color:red;">'..v[3]..'$</span> ', name = v[2]}) end
 	ESX.UI.Menu.CloseAll()
-	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'actions', {title = _U('shop'), align = 'left', elements = elements }, function(data, menu)	
+	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'actions', {title = 'SHOP', align = 'left', elements = elements }, function(data, menu)	
 		for _,v in pairs(Config.Food) do
 			if data.current.name == v[2] then
 				TriggerServerEvent('grz_1:Shop', 1, v[1], v[2], v[3])
 			end
 		end
 	end, function(data, menu) menu.close() end)
-end 
+end
 
 function OpenPhoneShopMenu()
 	local elements = {}
 	for _,v in pairs(Config.PhoneStore) do table.insert(elements, {label = v[1]..' | <span style="color:red;">'..v[3]..'$</span> ', name = v[2]}) end
 	ESX.UI.Menu.CloseAll()
-	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'actions', {title = _U('phoneshop'), align = 'left', elements = elements }, function(data, menu)	
+	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'actions', {title = 'PHONE SHOP', align = 'left', elements = elements }, function(data, menu)	
 		for _,v in pairs(Config.PhoneStore) do
 			if data.current.name == v[2] then
 				TriggerServerEvent('grz_1:Shop', 1, v[1], v[2], v[3])
@@ -39,7 +39,7 @@ function OpenHuntShopMenu()
 	local elements = {}
 	for _,v in pairs(Config.HuntStore) do table.insert(elements, {label = v[1]..' | <span style="color:red;">'..v[3]..'$</span> ', name = v[2]}) end
 	ESX.UI.Menu.CloseAll()
-	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'actions', {title = _U('huntshop'), align = 'left', elements = elements }, function(data, menu)	
+	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'actions', {title = 'HUNT SHOP', align = 'left', elements = elements }, function(data, menu)	
 		for _,v in pairs(Config.HuntStore) do
 			if data.current.name == v[2] then
 				TriggerServerEvent('grz_1:Shop', 1, v[1], v[2], v[3])
@@ -52,7 +52,7 @@ function OpenChurchMenu()
 	local elements = {}
 	for _,v in pairs(Config.Church) do table.insert(elements, {label = v[1]..' | <span style="color:red;">'..v[3]..'$</span> ', name = v[2]}) end
 	ESX.UI.Menu.CloseAll()
-	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'actions', {title = _U('church'), align = 'left', elements = elements }, function(data, menu)	
+	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'actions', {title = 'CHURCH', align = 'left', elements = elements }, function(data, menu)	
 		for _,v in pairs(Config.Church) do
 			if data.current.name == v[2] then
 				TriggerServerEvent('grz_1:Shop', 1, v[1], v[2], v[3])
@@ -65,7 +65,7 @@ function OpenVigneMenu()
 	local elements = {}
 	for _,v in pairs(Config.Vigne) do table.insert(elements, {label = v[1]..' | <span style="color:red;">'..v[3]..'$</span> ', name = v[2]}) end
 	ESX.UI.Menu.CloseAll()
-	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'actions', {title = _U('vigne'), align = 'left', elements = elements }, function(data, menu)	
+	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'actions', {title = 'VIGNE', align = 'left', elements = elements }, function(data, menu)	
 		for _,v in pairs(Config.Vigne) do
 			if data.current.name == v[2] then
 				TriggerServerEvent('grz_1:Shop', 1, v[1], v[2], v[3])
@@ -78,7 +78,7 @@ function OpenPharmacyMenu()
 	local elements = {}
 	for _,v in pairs(Config.PharmacyShop) do table.insert(elements, {label = v[1]..' | <span style="color:red;">'..v[3]..'$</span> ', name = v[2]}) end
 	ESX.UI.Menu.CloseAll()
-	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'actions', {title = _U('pharmacie'), align = 'left', elements = elements }, function(data, menu)	
+	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'actions', {title = 'PHARMACIE', align = 'left', elements = elements }, function(data, menu)	
 		for _,v in pairs(Config.PharmacyShop) do
 			if data.current.name == v[2] then
 				TriggerServerEvent('grz_1:Shop', 1, v[1], v[2], v[3])
@@ -91,7 +91,7 @@ function OpenIllegalPharmacyMenu()
 	local elements = {}
 	for _,v in pairs(Config.IllegalPharmacyShop) do table.insert(elements, {label = v[1]..' | <span style="color:red;">'..v[3]..'$</span> ', name = v[2]}) end
 	ESX.UI.Menu.CloseAll()
-	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'actions', {title = _U('pharmacie'), align = 'left', elements = elements }, function(data, menu)	
+	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'actions', {title = 'PHARMACIE', align = 'left', elements = elements }, function(data, menu)	
 		for _,v in pairs(Config.IllegalPharmacyShop) do
 			if data.current.name == v[2] then
 				TriggerServerEvent('grz_1:Shop', 1, v[1], v[2], v[3])
@@ -103,11 +103,21 @@ end
 function OpenJumpAirMenu()
 	local elements = {}
 	for _,v in pairs(Config.JumpAir) do table.insert(elements, {label = v[1]..' | <span style="color:red;">'..v[3]..'$</span> ', name = v[2]}) end
-	ESX.UI.Menu.CloseAll()
-	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'actions', {title = _U('pharmacie'), align = 'left', elements = elements }, function(data, menu)	
+ 	ESX.UI.Menu.CloseAll()
+	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'actions', { title = 'JUMP AIR', align = 'left', elements = elements }, function(data, menu)		
 		for _,v in pairs(Config.JumpAir) do
 			if data.current.name == v[2] then
-				TriggerServerEvent('grz_1:Shop', 1, v[1], v[2], v[3])
+				ESX.TriggerServerCallback('grz_1:checkLicense', function(hasWeaponLicense)
+					if v[4] == 1 then
+						if hasWeaponLicense then
+							TriggerServerEvent('grz_1:Shop', 2, v[1], v[2], v[3])
+                		else
+							ESX.ShowAdvancedNotification(_U('armurerie'), '', _U('PasLicense'), 'CHAR_DOM', 1)
+						end
+					else
+						TriggerServerEvent('grz_1:Shop', 2, v[1], v[2], v[3])
+					end
+				end, GetPlayerServerId(PlayerId()), 'weapon')   
 			end
 		end
 	end, function(data, menu) menu.close() end)
@@ -117,7 +127,7 @@ function OpenYouToolMenu()
 	local elements = {}
 	for _,v in pairs(Config.YouToolShop) do table.insert(elements, {label = v[1]..' | <span style="color:red;">'..v[3]..'$</span> ', name = v[2]}) end
 	ESX.UI.Menu.CloseAll()
-	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'actions', {title = _U('pharmacie'), align = 'left', elements = elements }, function(data, menu)	
+	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'actions', {title = 'YOUTOOL', align = 'left', elements = elements }, function(data, menu)	
 		for _,v in pairs(Config.YouToolShop) do
 			if data.current.name == v[2] then
 				TriggerServerEvent('grz_1:Shop', 1, v[1], v[2], v[3])
@@ -127,13 +137,54 @@ function OpenYouToolMenu()
 end
 
 function OpenYouToolBackMenu()
+    ESX.UI.Menu.CloseAll()
+
+    ESX.UI.Menu.Open(
+        'default', GetCurrentResourceName(), 'pawn_sell_menu',
+        {
+			title    = 'YouTool boutique arrière',
+			align	 = 'left',
+            elements = {
+                {label = 'Acheter', value = 'buyitem'},
+                {label = 'Vendre', value = 'sellitem'},
+            }
+        },
+        function(data, menu)
+            if data.current.value == 'buyitem' then
+                OpenYouToolBackMenuBuy()
+            elseif data.current.value == 'sellitem' then
+                OpenYouToolBackMenuSell()
+            end
+        end,
+        function(data, menu)
+            menu.close()
+        end
+    )
+end
+
+function OpenYouToolBackMenuBuy()
 	local elements = {}
 	for _,v in pairs(Config.YouToolBackShop) do table.insert(elements, {label = v[1]..' | <span style="color:red;">'..v[3]..'$</span> ', name = v[2]}) end
 	ESX.UI.Menu.CloseAll()
-	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'actions', {title = _U('pharmacie'), align = 'left', elements = elements }, function(data, menu)	
+	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'actions', {title = 'YOUTOOL', align = 'left', elements = elements }, function(data, menu)	
 		for _,v in pairs(Config.YouToolBackShop) do
 			if data.current.name == v[2] then
 				TriggerServerEvent('grz_1:Shop', 1, v[1], v[2], v[3])
+				ESX.UI.Menu.CloseAll()
+			end
+		end
+	end, function(data, menu) menu.close() end)
+end
+
+function OpenYouToolBackMenuSell()
+	local elements = {}
+	for _,v in pairs(Config.YouToolBackShopSell) do table.insert(elements, {label = v[1]..' | <span style="color:red;">'..v[3]..'$</span> ', name = v[2]}) end
+	ESX.UI.Menu.CloseAll()
+	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'actions', {title    = 'Rachat d\'item vendu ici', align = 'left', elements = elements }, function(data, menu)	
+		for _,v in pairs(Config.YouToolBackShopSell) do
+			if data.current.name == v[2] then
+				TriggerServerEvent('grz_1:ShopSell', 1, v[1], v[2], v[3])
+				ESX.UI.Menu.CloseAll()
 			end
 		end
 	end, function(data, menu) menu.close() end)
@@ -143,7 +194,7 @@ function OpenArmurerieMenu()
 	local elements = {}
 	for _,v in pairs(Config.Weapon) do table.insert(elements, {label = v[1]..' | <span style="color:red;">'..v[3]..'$</span> ', name = v[2]}) end
  	ESX.UI.Menu.CloseAll()
-	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'actions', { title = _U('armurerie'), align = 'left', elements = elements }, function(data, menu)		
+	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'actions', { title = 'ARMURIE', align = 'left', elements = elements }, function(data, menu)		
 		for _,v in pairs(Config.Weapon) do
 			if data.current.name == v[2] then
 				ESX.TriggerServerCallback('grz_1:checkLicense', function(hasWeaponLicense)
@@ -174,7 +225,7 @@ function OpenPoleEmploiMenu()
 		end
 
 		ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'joblisting', {
-			title    = _U('poleemploi'),
+			title    = 'POLE EMPLOIS',
 			align    = 'top-left',
 			elements = elements
 		}, function(data, menu)
