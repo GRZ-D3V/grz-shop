@@ -24,4 +24,6 @@ Optimized Script | Easy Setup | Shop. Armory. Employment center. Sell item
 
 
 # Wiki
-I have a set a Wiki that will help you understand and use my script :)
+I have a set a Wiki that will help you understand and use my script :) 
+
+https://github.com/GRZ-D3V/grz-shop/wiki
