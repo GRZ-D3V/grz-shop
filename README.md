@@ -1,6 +1,6 @@
 # GRZ SHOP
 
-Optimized Script | Easy Setup | Shop. Armory. Employment center. Sell item
+Optimized Script | Easy Setup | Shop Armory | Employment center | Sell item
 
 # Instalation 
 
