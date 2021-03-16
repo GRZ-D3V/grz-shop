@@ -2,10 +2,6 @@
 
 Optimized Script | Easy Setup | Shop. Armory. Employment center. Sell item
 
-# Important
-
-  - I have my own licensing system so if you don't want to use remove the sv_license and replace the license check trigger in the client and replace it with yours.
-
 # Instalation 
 
   - Ensure grz-shop in server.cfg
